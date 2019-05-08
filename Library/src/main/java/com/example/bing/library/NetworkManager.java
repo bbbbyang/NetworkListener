@@ -42,8 +42,16 @@ public class NetworkManager {
         application.registerReceiver(receiver, filter);
     }
 
-    public void setListener(NetChangeObserver listener) {
-        receiver.setListener(listener);
+    public void registerObserver(Object register) {
+        receiver.registerObserver(register);
+    }
+
+    public void unRegisterObserver(Object register) {
+        receiver.unRegisterObserver(register);
+    }
+
+    public void unRegisterAllObserver() {
+        receiver.unRegisterAllObserver();
     }
 
 }
